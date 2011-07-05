@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  descricao: MyText
+  unidade: 1
+  precoCusto: 1
+  precoVenda: 1
+  estoque: 1
+  estoqueMinimo: 1
+  codigoBarras: 1
+  ativo: false
+  grupoProduto_id: 1
+  fornecedor_id: 1
+
+two:
+  nome: MyString
+  descricao: MyText
+  unidade: 1
+  precoCusto: 1
+  precoVenda: 1
+  estoque: 1
+  estoqueMinimo: 1
+  codigoBarras: 1
+  ativo: false
+  grupoProduto_id: 1
+  fornecedor_id: 1

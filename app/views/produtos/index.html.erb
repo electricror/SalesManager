@@ -1,0 +1,67 @@
+<%= form_tag(produtos_path, :method => "get") do %>
+  <div id="buscaDados"><span>Listando Produtos</span></div>
+  <div id="buscaDados">
+    <select name="filtro" id="filtro">
+      <option value="" selected="selected">Buscar por...</option>
+      <option value="nome">Nome</option>
+      <option value="grupoProduto_id">Grupo</option>
+      <option value="fornecedor_id">Fornecedor</option>
+      <option value="codigoBarras">Codigo Barras</option>
+    </select>
+  </div>
+  <div id="buscaDados"><input id="query" type="text" value="Digitar..." name="query" onfocus="this.value='';"/></div>
+  <div id="buscaDados"><input id="queryImage" type="image" src="/images/search_icon.png"/></div>
+  <div id="buscaDados"><%= link_to 'New Produto', new_produto_path, :class=>"novo" %></div>
+<% end %>
+
+<br/><br/>
+<br/>
+
+<% if @produtos.nil? or @produtos.empty? %>
+  <%= render :partial => 'generals/message' %>
+<% else %>
+
+  <table cellpadding="0" cellspacing="0" border="0" class="bordasimples">
+    <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Unidade</th>
+      <th>Preco Custo</th>
+      <th>Preco Venda</th>
+      <th>Mão de Obra</th>
+      <th>Total</th>
+      <th>Estoque</th>
+      <th>Estoque Minimo</th>
+      <th>Codigo Barras</th>
+      <th>Ativo</th>
+      <th>Grupoproduto</th>
+      <th>Fornecedor</th>
+      <th><img src="/images/file_document.png" alt=""/></th>
+      <th><img src="/images/file_edit.png" alt=""/></th>
+      <th><img src="/images/file_exclude.png" alt=""/></th>
+    </tr>
+
+    <% @produtos.each do |produto| %>
+      <tr class="<%= cycle("odd", "even") %>">
+        <td><%= produto.nome %></td>
+        <td><%= produto.descricao %></td>
+        <td><%= produto.unidade %></td>
+        <td><%= produto.precoCusto %></td>
+        <td><%= produto.precoVenda %></td>
+        <td><%= produto.maoObra %></td>
+        <td><%= produto.total %></td>
+        <td><%= produto.estoque %></td>
+        <td><%= produto.estoqueMinimo %></td>
+        <td><%= produto.codigoBarras %></td>
+        <td><%= produto.ativo %></td>
+        <td><%= produto.grupoProduto_id %></td>
+        <td><%= produto.fornecedor_id %></td>
+        <td><%= link_to 'Show', produto %></td>
+        <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
+        <td><%= link_to 'Destroy', produto, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+
+<% end %>
+<br />

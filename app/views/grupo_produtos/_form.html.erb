@@ -1,0 +1,10 @@
+<%= form_for(@grupo_produto) do |f| %>
+  <%= render :partial => 'generals/model_errors', :locals => {:obj => @grupo_produto}%>
+
+  <div class="field">
+    <%= f.text_field :nome, :placeholder=>"Nome do Grupo do Produto..." %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Salvar'%>
+  </div>
+<% end %>

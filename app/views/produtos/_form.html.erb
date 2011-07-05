@@ -1,0 +1,62 @@
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery(":input:not(:hidden):first").focus();
+  });
+</script>
+<%= form_for(@produto) do |f| %>
+  <%= render :partial => 'generals/model_errors', :locals => {:obj => @produto}%>
+
+  <div class="field">
+    <%= f.text_field :nome, :placeholder=>"Nome do Produto..." %>
+  </div>
+  <div class="field">
+    <%= f.text_area :descricao, :rows=> 7, :cols=> 60, :placeholder=>"Descrição do produto..." %>
+  </div>
+  <div class="field">
+    <%= f.label "Unidade" %><br />
+    <%= f.text_field :unidade, :placeholder=>"Quantidade Unitaria.Ex: 1, 6, 12, 24, etc.", :class=>"4digitos" %>
+  </div>
+  <div class="field">
+    <%= f.label "preço custo" %><br />
+    <%= f.text_field :precoCusto, :class=>"7digitos" %>
+  </div>
+  <div class="field">
+    <%= f.label "preço venda" %><br />
+    <%= f.text_field :precoVenda, :class=>"7digitos" %>
+  </div>
+  <div class="field">
+    <%= f.label "Mão de Obra" %><br />
+    <%= f.text_field :maoObra, :class=>"4digitos" %>
+  </div>
+  <div class="field">
+    <%= f.label "Total" %><br />
+    <%= f.text_field :total, :class=>"7digitos", :disabled=>true %>
+  </div>
+  <div class="field">
+    <%= f.label "estoque" %><br />
+    <%= f.text_field :estoque, :class=>"4digitos", :disabled=>true %>
+  </div>
+  <div class="field">
+    <%= f.label "estoque minimo" %><br />
+    <%= f.text_field :estoqueMinimo, :class=>"4digitos" %>
+  </div>
+  <div class="field">
+    <%= f.label "codigo Barras" %><br />
+    <%= f.text_field :codigoBarras, :class=>"barras" %>
+  </div>
+  <div class="field">
+    <%= f.check_box :ativo %>
+    <%= f.label :ativo %>
+  </div>
+  <div class="field">
+    <%= f.label "grupo" %><br />
+    <%= f.text_field :grupoProduto_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fornecedor_id %><br />
+    <%= f.text_field :fornecedor_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Salvar'%>
+  </div>
+<% end %>

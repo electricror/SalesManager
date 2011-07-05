@@ -1,0 +1,82 @@
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+/* borda de tabelas de resultados */
+table.bordasimples		{ border-collapse: collapse; font-family: arial; font-size: 12px;  }
+table.bordasimples tr td	{ border: 1px solid #dfdfdf; }
+table.bordasimples th		{ height: 30px; padding: 10px; border: 1px solid #dfdfdf; font-size: 15px; color: #8f8f8f; background: #f4f7fa; }
+table.bordasimples .edicao	{ font-size: 12px; color: #fc8800; text-align: center; text-decoration: underline; }
+table.bordasimples .edicao a	{ color: #fc8800; }
+td				{ padding: 10px 5px 10px 5px; }
+table.bordasimples tr.even      { background: #ebebeb; }
+
+/* cor para cada tipo de alerta de menssagem */
+#message.alert       { border-radius: 6px 6px 6px 6px; width: 600px; margin: 0px auto 0px; text-align: center; background-color: #FFDDDD; border: 1px solid #FFBBBB; }
+#message.notice      { border-radius: 6px 6px 6px 6px; width: 600px; margin: 0px auto 0px; text-align: center; background-color: #BBFFB6; border: 1px solid #1FDF00; }
+
+/* campo com erros, form*/
+form .field_with_errors input     {border: 1px solid #FFBBBB; border-radius: 6px 6px 6px 6px;}
+form .field_with_errors textarea  {border: 1px solid #FFBBBB; border-radius: 6px 6px 6px 6px;}
+#error_explanation ul             {border: 1px solid #FFBBBB; border-radius: 6px 6px 6px 6px;}
+
+#buscaDados		{ float: left; margin: 0 10px 20px 0; }
+
+input			{ padding: 5px 10px 5px 10px; height: 18px; border: solid 1px #d8ced7; background: url(/images/formBackground.gif) repeat-x; font-family: arial; font-size: 13px; color: #4b4d4a; }
+select			{ padding: 5px 10px 5px 10px; height: 30px; border: solid 1px #d8ced7; background: url(/images/formBackground.gif) repeat-x; font-family: arial; font-size: 13px; color: #4b4d4a; }
+#buscaDados span 	{ color: navy; font-family: arial; font-size: 22px; font-weight: bold; }
+.novo   		{ padding: 1px 10px 12px 8px; height: 18px; border: solid 1px #d8ced7; font-size: 13px; color: #4b4d4a; }

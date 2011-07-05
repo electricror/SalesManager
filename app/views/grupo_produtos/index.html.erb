@@ -1,0 +1,27 @@
+<h1>Listing grupo_produtos</h1>
+
+<% if @grupo_produtos.nil? or @grupo_produtos.empty? %>
+  <%= render :partial => 'generals/message' %>
+<% else %>
+
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th><img src="/images/file_document.png" alt=""/></th>
+      <th><img src="/images/file_edit.png" alt=""/></th>
+      <th><img src="/images/file_exclude.png" alt=""/></th>
+    </tr>
+
+    <% @grupo_produtos.each do |grupo_produto| %>
+      <tr class="<%= cycle("odd", "even") %>">
+        <td><%= grupo_produto.nome %></td>
+        <td><%= link_to 'Show', grupo_produto %></td>
+        <td><%= link_to 'Edit', edit_grupo_produto_path(grupo_produto) %></td>
+        <td><%= link_to 'Destroy', grupo_produto, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<br />
+
+<%= link_to 'New Grupo produto', new_grupo_produto_path %>
